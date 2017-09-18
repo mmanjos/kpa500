@@ -108,7 +108,8 @@ class webkpa(object):
                   <title>Update KPA Page</title>
                   <link rel="stylesheet" type="text/css" href="/css/rot.css">
                 </head>
-                <H1>Writing command """+self.cmd+""" to KPA500"""
+                <H1>The comment to write is """+self.cmd+""" to KPA500
+                <h3>This HAS NOT BEEN DONE (to be implemented) """
 
 
     def info(self, msg):
