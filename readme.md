@@ -1,8 +1,8 @@
-#Installing
+# Installing
 
 You will need python, preferable3 - as I have not tested it on anything else !
 
-#Python Modules 
+# Python Modules 
 
 Should be straightforward
 
@@ -10,7 +10,7 @@ Should be straightforward
 
 Occasionally yaml can be a little strange to install  - fingers crossed.
 
-#Configuration
+# Configuration
 
 
 There are 2 places we need to change things - the first is a simple port name.
@@ -25,12 +25,11 @@ The webpka.py starts a web server, which listens on an IP address (this should b
 
 Please note the IP Address and the Serial Portname are on the machine where the KPA500 is connected to.
 
-#Starting the Server
+# Starting the Server
 
 Assuming all the Configuration changes are done
 
-
-python webpka.py
+    python webpka.py
 
 You can make this a detached process if you need - but to start with it may be best to see what the program is outputting.
 
