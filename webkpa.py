@@ -17,7 +17,7 @@ class webkpa(object):
                   <link rel="stylesheet" type="text/css" href="/css/rot.css">
                 </head>
                 <body>
-                <h3>V1.0 Read Only</h3>
+                <h3>V1.0 Read Write</h3>
                 <hr>
            """
     site_end = """  </body>
@@ -94,7 +94,7 @@ class webkpa(object):
                 <h1>Change</h1>""" + change + """<hl><h2>No Change</h2>""" + nochange + "<h3> Command String is </h3><br>" + cmd +\
         """         
         <form  action="write">\n
-        <h1> PRESS Access to Write these Changes 
+        <h1> PRESS Submit to Write these Changes  (Bottom of page)
         <br>          
         <h2> Use the Back Button on the Browser to return to the previous page</h2>         
         <br>         
@@ -104,12 +104,13 @@ class webkpa(object):
 
     @cherrypy.expose
     def write(self):
+        self.amp.write(self.cmd)
         return """<head>
                   <title>Update KPA Page</title>
                   <link rel="stylesheet" type="text/css" href="/css/rot.css">
                 </head>
-                <H1>The comment to write is """+self.cmd+""" to KPA500
-                <h3>This HAS NOT BEEN DONE (to be implemented) """
+                <H3>The command has been sent """+self.cmd+""" to KPA500"""
+                 
 
 
     def info(self, msg):

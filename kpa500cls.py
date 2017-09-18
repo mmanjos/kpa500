@@ -107,6 +107,11 @@ class kpa500cls(object):
         for ky in self.cmd.keys():
             self.get(ky + ';', self.cmd[ky]['Msg'])
 
+    def write(self,cmd):
+       ''' The user should have seen this on screen already '''
+       self.serial_port.write(cmd.encode())
+
+
     def setBand(self):
         try:
             self.dbg('Trying to set the Band Value')
