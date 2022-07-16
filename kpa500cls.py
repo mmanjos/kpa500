@@ -46,7 +46,7 @@ class kpa500cls(object):
         self.l = logging.getLogger(__name__)
         with open(config_file, 'r') as ymlfile:
             self.dbg("Opened file " + config_file)
-            cfg = yaml.load(ymlfile)
+            cfg = yaml.safe_load(ymlfile)
             try:
                 self.device = cfg['kpa500cls']['device']
                 self.dbg('Read Yaml device set to {}'.format(self.device))

@@ -6,7 +6,7 @@
 
 Install dependencies using pip by running:
 
-  pip install -r requirements.txt
+    pip install -r requirements.txt
 
 ### Arch Linux
 
@@ -24,7 +24,7 @@ If you don't want to use pip, the following Arch packages should provide all of 
 
 Assuming all the Configuration changes are done
 
-  python webpka.py
+    python webpka.py
 
 You can make this a detached process if you need - but to start with it may be best to see what the program is outputting.
 
