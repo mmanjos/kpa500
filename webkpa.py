@@ -26,7 +26,7 @@ class webkpa(object):
     tab_header = """"<table style="width:100%">
   <tr>
     <th>Command</th>
-    <th>Description</th> 
+    <th>Description</th>
     <th>Value</th>
     <th>New Value</th>
   </tr>
@@ -92,14 +92,14 @@ class webkpa(object):
                   <link rel="stylesheet" type="text/css" href="/css/rot.css">
                 </head>
                 <h1>Change</h1>""" + change + """<hl><h2>No Change</h2>""" + nochange + "<h3> Command String is </h3><br>" + cmd +\
-        """         
+        """
         <form  action="write">\n
         <h1> PRESS Submit to Write these Changes  (Bottom of page)
-        <br>          
-        <h2> Use the Back Button on the Browser to return to the previous page</h2>         
-        <br>         
-        <input type="submit" value="Submit">         
-        </form>         
+        <br>
+        <h2> Use the Back Button on the Browser to return to the previous page</h2>
+        <br>
+        <input type="submit" value="Submit">
+        </form>
         """
 
     @cherrypy.expose
@@ -110,7 +110,7 @@ class webkpa(object):
                   <link rel="stylesheet" type="text/css" href="/css/rot.css">
                 </head>
                 <H3>The command has been sent """+self.cmd+""" to KPA500"""
-                 
+
 
 
     def info(self, msg):
@@ -144,7 +144,7 @@ if __name__ == "__main__":
             }
         }
 
-        cherrypy.config.update({'server.socket_host': '192.168.1.163'})
+        cherrypy.config.update({'server.socket_host': '0.0.0.0'})
         cherrypy.config.update({'server.socket_port': 8000})
         log.debug('About to start Web Server')
         cherrypy.quickstart(webkpa('config.yaml'), '/', conf)
